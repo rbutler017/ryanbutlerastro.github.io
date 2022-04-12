@@ -6,6 +6,20 @@
 <title>
 Ryan's Spectacular 1990s Webpage
 </title>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {background-color:#ffffff;background-image:url(https://i.imgur.com/XK2HC0p.png);background-repeat:repeat;background-position:top left;background-attachment:fixed;}
@@ -30,5 +44,13 @@ p {font-family:Cursive, serif;font-size:14px;font-style:normal;font-weight:norma
 onclick="window.location.href = 'https://images.nypl.org/index.php?id=1599690&t=w';">
 Click Here
 </button>
+<p>Here's a fun game that you can play on this webpage. I call it click the button. The goal is to click the button a lot of times. You should take great pride in 
+seeing the little number increase, I know I sure do. Enjoy this fun game! </p>
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<div id="sfc85fm95wt2u712x27z3dk8w115f2u2wq7"></div>
+<script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=85fm95wt2u712x27z3dk8w115f2u2wq7&down=async" async></script>
+<br><a href="https://www.freecounterstat.com">web hit counter</a><noscript><a href="https://www.freecounterstat.com" title="web hit counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=85fm95wt2u712x27z3dk8w115f2u2wq7" border="0" title="web hit counter" alt="web hit counter"></a></noscript>
+
 </body>
 </html>
